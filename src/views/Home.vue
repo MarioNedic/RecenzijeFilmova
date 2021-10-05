@@ -1,15 +1,27 @@
 <template>
-  <hello-world />
+<v-container>
+  <v-row>
+    <v-col>
+    </v-col>
+  </v-row>
+</v-container>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+export default {
+  data() {
+    return {
+      slike: [],
+    };
+  },
 
-  export default {
-    name: 'Home',
-
-    components: {
-      HelloWorld,
-    },
+  methods: {
+    
   }
+};
+
+
+
+
+
 </script>

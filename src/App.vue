@@ -50,7 +50,7 @@ export default {
       },
       {
         text: "PretraziGaleriju",
-        path: "/pretraziGaleriju",
+        path: "/pretrazigaleriju",
       },
       {
         text: "Login",
