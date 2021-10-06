@@ -38,7 +38,6 @@ export default {
           },
         })
         .then((response) => {
-          console.log(response.data.results);
           this.izabraniMR = response.data.results;
         });
     },
