@@ -7,16 +7,16 @@
         cols="12"
         md="4"
       >
-      <izabrane-rec :movie="movie"></izabrane-rec>
+      <kartice-rec :movie="movie"></kartice-rec>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import IzabraneRec from '../components/PronadeneRec.vue';
+import KarticeRec from '../components/KarticeRec.vue';
 export default {
-  components: { IzabraneRec },
+  components: {KarticeRec },
   name: "Home",
   data() {
     return {

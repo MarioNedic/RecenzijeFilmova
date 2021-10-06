@@ -19,7 +19,7 @@
         cols="12"
         md="4"
       >
-<pronadene-rec :movie="movie"></pronadene-rec>
+<kartice-rec :movie="movie"></kartice-rec>
       </v-col>
     </v-row>
     <v-row>
@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import PronadeneRec from '../components/PronadeneRec.vue';
+import KarticeRec from '../components/KarticeRec.vue';
 export default {
-  components: { PronadeneRec },
+  components: { KarticeRec},
   data() {
     return {
       trazeniMR: [],
@@ -76,7 +76,7 @@ export default {
       clearTimeout(this._searchTimerId);
       this._searchTimerId = setTimeout(() => {
         this.getSearchedMR();
-      }, 500);
+      }, 750);
     },
 
     searchEntries() {
