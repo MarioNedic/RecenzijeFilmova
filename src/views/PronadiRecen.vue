@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Pretrazivac galerije</h1>
+    <h1>Pronadi recenzije</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      pretrazivac: [],
+      racun: [],
     };
   },
 };

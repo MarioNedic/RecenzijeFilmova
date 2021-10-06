@@ -1,34 +1,20 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar app dark>
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Galerija</v-toolbar-title>
+    <v-app-bar app color="teal lighten-3" dark>
 
       <v-spacer></v-spacer>
 
-      <v-navigation-drawer app v-model="drawer" absolute temporary dark>
-        <v-list nav dense>
-          <v-list-item-group
-            v-model="group"
-            active-class="deep-purple--text text--accent-4"
-          >
             <v-row>
-              <v-col cols="1">
                 <v-btn
                   v-for="link in links"
                   :key="link.text"
                   text
                   :to="link.path"
                 >
-                  <v-icon>mdi-circle </v-icon>
+                  <v-icon>mdi-circle-double </v-icon>
                   {{ link.text }}
                 </v-btn>
-              </v-col>
             </v-row>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer>
     </v-app-bar>
     <v-main>
       <router-view />
@@ -41,7 +27,6 @@ export default {
   name: "App",
 
   data: () => ({
-    drawer: false,
     group: null,
     links: [
       {
@@ -49,12 +34,12 @@ export default {
         path: "/",
       },
       {
-        text: "PretraziGaleriju",
-        path: "/pretrazigaleriju",
+        text: "Pronadi Recenziju",
+        path: "/pronadirecen",
       },
       {
-        text: "Login",
-        path: "/login",
+        text: "Dodaj Recenziju",
+        path: "/dodajrecen",
       },
 
     ],

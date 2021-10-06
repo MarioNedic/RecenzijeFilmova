@@ -11,14 +11,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/pretrazigaleriju',
-    name: 'PretraziGaleriju',
-    component: () => import('../views/PretraziGaleriju.vue')
+    path: '/pronadirecen',
+    name: 'PronadiRecen',
+    component: () => import('../views/PronadiRecen.vue')
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: () => import('../views/Login.vue')
+    path: '/dodajrecen',
+    name: 'DodajRecen',
+    component: () => import('../views/DodajRecen.vue')
   },
 ]
 
