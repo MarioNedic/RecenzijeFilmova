@@ -30,7 +30,7 @@ export default {
     group: null,
     links: [
       {
-        text: "Home",
+        text: "Izabrane recenzije",
         path: "/",
       },
       {

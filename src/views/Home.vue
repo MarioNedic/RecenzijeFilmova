@@ -1,27 +1,47 @@
 <template>
-<v-container>
-  <v-row>
-    <v-col>
-    </v-col>
-  </v-row>
-</v-container>
+  <v-container>
+    <v-row justify="center">
+      <v-col
+        v-for="movie in izabraniMR"
+        :key="movie.display_title"
+        cols="12"
+        md="4"
+      >
+      <izabrane-rec :movie="movie"></izabrane-rec>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
+import IzabraneRec from '../components/PronadeneRec.vue';
 export default {
+  components: { IzabraneRec },
+  name: "Home",
   data() {
     return {
-      slike: [],
+      izabraniMR: [],
     };
   },
 
+  created() {
+    this.getPickMR();
+  },
+
   methods: {
-    
-  }
+    getPickMR() {
+      let api = "https://api.nytimes.com/svc/movies/v2/reviews/picks.json";
+      this.axios
+        .get(api, {
+          params: {
+            "api-key": "jxKec7QpLBSX5wG23WDGRM9XBAWcnAbD",
+          },
+        })
+        .then((response) => {
+          console.log(response.data.results);
+          this.izabraniMR = response.data.results;
+        });
+    },
+  },
 };
-
-
-
-
-
 </script>
